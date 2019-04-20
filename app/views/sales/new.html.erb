@@ -1,0 +1,38 @@
+<div class='row'>
+  <%= form_with(model: @sale, local: true) do |f| %>
+    <div class='col-md-8 offset-md-4'>
+      <%= f.label :cod %>
+      <%= f.number_field :cod %>
+    </div>
+
+    <div class='col-md-8 offset-md-4'>
+      <%= f.label :detail %>
+      <%= f.text_area :detail %>
+    </div>
+
+    <div class='col-md-8 offset-md-4'>
+      <%= f.label :category %>
+      <%= f.text_field :category %>
+    </div>
+
+    <div class='col-md-8 offset-md-4'>
+      <%= f.label :value %>
+      <%= f.number_field :value %>
+    </div>
+
+    <div class='col-md-8 offset-md-4'>
+      <%= f.label :discount %>
+      <%= f.number_field :discount %>
+    </div>
+
+    <div class='col-md-8 offset-md-4'>
+      <%= f.label :tax %>
+      <%= f.check_box :tax %>
+    </div>
+
+    <div class='col-md-8 offset-md-4'>
+    <%= f.submit :crear %>
+    </div>
+  <% end %>
+  <%= link_to 'Atras', sales_path %>
+</div>
